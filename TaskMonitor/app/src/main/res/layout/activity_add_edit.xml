@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEdit">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#101010"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/rl02"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="22sp"
+            android:textColor="#D0FFFFFF"
+            android:text="TASKS MONITOR"
+            android:paddingTop="15dp"
+            android:paddingLeft="15sp"
+            android:textStyle="bold"
+            android:id="@+id/titleTxt"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="CREATE OR EDIT TASK"
+                android:textAlignment="textStart"
+                android:textColor="#FFC312"
+                android:layout_weight="1"
+                android:insetBottom="0dp"
+                android:backgroundTint="#101010"
+                android:id="@+id/btnCreateEditTask"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/rl02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#F3FDFDFD"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="15sp"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:text="Task ID : "
+            android:id="@+id/lblTaskID"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/lblTaskID"
+            android:padding="15sp"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:text="1"
+            android:textAlignment="textStart"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:id="@+id/txtTaskID"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblTaskID"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="15sp"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:text="Task Name : "
+            android:id="@+id/lblTaskName"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/txtTaskName"
+            android:textColor="#101010"
+            app:layout_constraintTop_toBottomOf="@id/txtTaskID"
+            app:layout_constraintLeft_toRightOf="@id/lblTaskName"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:paddingTop="8sp"
+            android:maxLines="1"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblTaskName"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="15sp"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:text="Task Date : "
+            android:id="@+id/lblTaskDate"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/txtTaskDate"
+            app:layout_constraintTop_toBottomOf="@id/txtTaskName"
+            app:layout_constraintLeft_toRightOf="@id/lblTaskDescription"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:paddingTop="8sp"
+            android:maxLines="1"
+            android:inputType="datetime"
+            android:textColor="#101010"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/lblTaskDate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:padding="15sp"
+            android:textColor="#101010"
+            android:textSize="14sp"
+            android:text="Task Desc : "
+            android:id="@+id/lblTaskDescription"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/txtTaskDescription"
+            app:layout_constraintTop_toBottomOf="@id/txtTaskDate"
+            app:layout_constraintLeft_toRightOf="@id/lblTaskDescription"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="30dp"
+            android:paddingTop="8sp"
+            android:textColor="#101010"
+            android:minLines="1"
+            android:maxLines="4"
+            android:textSize="15sp"
+            />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Enable Notification  "
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/lblTaskDescription"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/swEnableNot"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/swEnableNot"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="#101010"
+            android:textColor="#D7FFFF"
+            android:text="CREATE TASK"
+            android:id="@+id/btnCreateTask"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/btnCreateTask"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:backgroundTint="#101010"
+            android:textColor="#D7FFFF"
+            android:id="@+id/btnBack"
+            android:text="BACK TO TASKS MENU"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

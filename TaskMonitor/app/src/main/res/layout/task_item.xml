@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEFFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivTaskStatus"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:srcCompat="@tools:sample/avatars"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textSize="14sp"
+        android:textColor="#101010"
+        app:layout_constraintLeft_toRightOf="@id/ivTaskStatus"
+        app:layout_constraintTop_toTopOf="@id/ivTaskStatus"
+        android:text="Task Name"
+        android:layout_marginLeft="25sp"
+        android:id="@+id/txtTaskName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textSize="12sp"
+        android:textColor="#101010"
+        app:layout_constraintLeft_toRightOf="@id/ivTaskStatus"
+        app:layout_constraintTop_toBottomOf="@id/txtTaskName"
+        android:text="Task Date"
+        android:layout_marginLeft="25sp"
+        android:id="@+id/txtTaskDate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textSize="13sp"
+        android:textColor="#101010"
+        app:layout_constraintLeft_toRightOf="@id/ivTaskStatus"
+        app:layout_constraintTop_toBottomOf="@id/txtTaskDate"
+        android:layout_marginRight="25dp"
+        android:text="Task Description"
+        android:layout_marginLeft="25sp"
+        android:id="@+id/txtTaskDesc"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/ivTaskStatus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

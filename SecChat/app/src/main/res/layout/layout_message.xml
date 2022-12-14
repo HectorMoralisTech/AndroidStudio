@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="0dp"
+        android:background="#F7FFFFFF"
+        android:backgroundTint="#F7FFFFFF"
+        android:elevation="0dp"
+        android:id="@+id/messageContainer"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/userPictureIv"
+                app:civ_border_color="#000000"
+                android:src="@drawable/ic_anonymous"
+                app:civ_circle_background_color="#1A1A1A"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hector Moralies"
+                android:textColor="#101010"
+                android:fontFamily="@font/roboto"
+                android:textSize="12sp"
+                android:textFontWeight="600"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/userPictureIv"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/usernameTv"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Hector MoraliesHector MoraliesHector MoraliesHector MoraliesHector MoraliesHector MoraliesHector MoraliesHector Moralies"
+                android:textColor="#101010"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@id/usernameTv"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/userPictureIv"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/messageTv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 min"
+                android:textColor="#101010"
+                android:fontFamily="@font/roboto"
+                android:textSize="11sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/timeTv"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

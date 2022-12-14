@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Chat">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/backButton"
+        android:src="@drawable/ic_back"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/infoButton"
+        android:src="@drawable/ic_info"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:transitionName="userPictureTr"
+        android:layout_height="40dp"
+        android:padding="0dp"
+        android:src="@drawable/logo_yellow"
+        app:layout_constraintLeft_toRightOf="@id/backButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/userPicture"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        app:layout_constraintLeft_toRightOf="@id/userPicture"
+        app:layout_constraintRight_toLeftOf="@id/infoButton"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:text="Hector Moralis"
+        android:fontFamily="@font/roboto"
+        android:textSize="13sp"
+        android:textColor="#000000"
+        android:id="@+id/userName"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        app:layout_constraintLeft_toRightOf="@id/userPicture"
+        app:layout_constraintRight_toLeftOf="@id/infoButton"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        android:id="@+id/userState"
+        android:layout_marginLeft="10dp"
+        android:text="last active 5 min ago"
+        android:textSize="10sp"
+        android:layout_marginTop="2dp"
+        android:textColor="#303030"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/chatRv"
+        app:layout_constraintTop_toBottomOf="@id/userPicture"
+        app:layout_constraintBottom_toTopOf="@id/sendButton"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"/>
+
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/message_input"
+        android:backgroundTint="#151515"
+        android:id="@+id/sendButton">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:tint="@color/white"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/ic_send"/>
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/messageInput"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/message_input"
+        android:backgroundTint="#ECECEC"
+        android:hint="Type a message"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="#606060"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sendButton"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/roboto"
+        android:textSize="13sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
